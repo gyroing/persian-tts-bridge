@@ -89,8 +89,6 @@ INPUT:
 DEFAULT LAYOUT:
   ./model/                  Model files, tokenizer.json, timing_model.json
   ./dict/                   cmudict.txt, latin_dict.txt
-  ./persian_normalizer      Text normalizer binary
-  ./tokenizer               Sentence chunker / tokenizer binary
 
 ENVIRONMENT VARIABLES (all optional, override defaults before running):
   Model & Synthesis:
@@ -105,14 +103,10 @@ ENVIRONMENT VARIABLES (all optional, override defaults before running):
     SPEAK_TIMING            Output path for word-level timing JSON (disabled if unset)
     SPEAK_TIMING_MODEL      Path to timing_model.json (default: <PTTS_MODEL>/timing_model.json)
 
-  Dictionaries (passed to persian_normalizer):
+  Dictionaries (used by built-in persian_normalizer):
     DICT_DIR                Dictionary directory (default: ./dict)
     G2P_CMUDICT             Path to cmudict.txt (default: <DICT_DIR>/cmudict.txt)
     G2P_LATIN_DICT          Path to latin_dict.txt (default: <DICT_DIR>/latin_dict.txt)
-
-  Helper Binaries:
-    PERSIAN_NORMALIZER      Path to persian_normalizer (default: ./persian_normalizer)
-    TOKENIZER               Path to tokenizer (default: ./tokenizer)
 
 EXAMPLES:
   # Direct text:
