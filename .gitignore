@@ -1,0 +1,15 @@
+# Rust build outputs
+/target/
+**/*.rs.bk
+
+# TTS Models & Hugging Face repo (not distributed in git)
+/model/
+/cilla-mini/
+
+# Backups & temporary audio/timing outputs
+*.bak
+*.bak/
+*.wav
+*.pcm
+output.json
+.DS_Store

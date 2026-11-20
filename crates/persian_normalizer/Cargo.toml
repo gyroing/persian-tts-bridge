@@ -1,0 +1,9 @@
+[package]
+name = "persian_normalizer"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "persian_normalizer"
+path = "src/lib.rs"
+crate-type = ["rlib", "staticlib", "cdylib"]
