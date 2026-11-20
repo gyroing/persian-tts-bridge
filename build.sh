@@ -21,7 +21,7 @@ RELEASE_DIR="$ROOT_DIR/target/release"
 INCLUDE_DIR="$ROOT_DIR/include"
 
 model_ready() {
-    [ -d "$MODEL_DIR" ] && { [ -f "$MODEL_DIR/model.q8.gguf" ] \vert{}\vert{} [ -f "$MODEL_DIR/model.safetensors" ]; }
+    [ -d "$MODEL_DIR" ] && { [ -f "$MODEL_DIR/model.q8.gguf" ] || [ -f "$MODEL_DIR/model.safetensors" ]; }
 }
 
 # 0. Check prerequisites
@@ -29,7 +29,7 @@ info "Checking prerequisites..."
 for cmd in git cargo rustc; do
     command -v "$cmd" >/dev/null 2>&1 || err "Required tool '$cmd' is not installed."
 done
-[ -d "$ROOT_DIR/crates" ] \vert{}\vert{} err "Workspace '$ROOT_DIR/crates' not found."
+[ -d "$ROOT_DIR/crates" ] || err "Workspace '$ROOT_DIR/crates' not found."
 ok "Prerequisites OK."
 
 # 1. Model & Hugging Face check
