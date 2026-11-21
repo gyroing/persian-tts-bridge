@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persian TTS Bridge — Demo Samples</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 820px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.7;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .title {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: #38bdf8;
+      direction: ltr;
+      text-align: left;
+    }
+    audio {
+      width: 100%;
+      margin: 0.6rem 0;
+    }
+    a {
+      color: #93c5fd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Persian Offline TTS Bridge — نمونه‌های صوتی</h1>
+  <p dir="ltr">Samples (24 kHz, 16-bit signed LE mono PCM, WAV) from <code>demo/</code>:</p>
+
+  <div class="card">
+    <div class="title">1. AI &amp; Hardware (demo/sample_1.wav)</div>
+    <p>در تاریخ 1404/08/25، شرکت NVIDIA از پردازنده گرافیکی جدید خود با 24.5 گیگابایت حافظه VRAM و معماری Blackwell رونمایی کرد که اجرای مدل‌های LLM در قالب GGUF را با latency زیر 18.4 میلی‌ثانیه و performance بسیار بالا روی سرورهای AWS و Azure ممکن می‌سازد.</p>
+    <audio controls preload="metadata" src="demo/sample_1.wav"></audio>
+    <div><a href="demo/sample_1.wav" download>دانلود sample_1.wav</a></div>
+  </div>
+
+  <div class="card">
+    <div class="title">2. Finance, Markets &amp; Decimals (demo/sample_2.wav)</div>
+    <p>طبق گزارش quarterly منتشرشده در 2026/03/15، ارزش سهام Apple و Microsoft به ترتیب 3.75 و 4.2 درصد رشد داشت و سرمایه‌گذاری مشترک OpenAI و Anthropic روی زیرساخت‌های cloud و دیتاسنترهای مجهز به پردازنده‌های AMD به 12.8 میلیارد دلار رسید.</p>
+    <audio controls preload="metadata" src="demo/sample_2.wav"></audio>
+    <div><a href="demo/sample_2.wav" download>دانلود sample_2.wav</a></div>
+  </div>
+
+  <div class="card">
+    <div class="title">3. Software &amp; TTS Pipeline (demo/sample_3.wav)</div>
+    <p>نسخه 2.4.1 کتابخانه persian-tts-bridge که با زبان Rust و Cargo نوشته شده، در تاریخ ۱۴۰۵/۰۲/۱۰ روی GitHub و HuggingFace منتشر شد و می‌تواند متن‌های فارسی و انگلیسی را با نرخ نمونه‌برداری 24000 هرتز و دقت 99.6 درصد به صورت real-time و آفلاین پردازش کند.</p>
+    <audio controls preload="metadata" src="demo/sample_3.wav"></audio>
+    <div><a href="demo/sample_3.wav" download>دانلود sample_3.wav</a></div>
+  </div>
+
+  <div class="card">
+    <div class="title">4. EVs, Energy &amp; Units (demo/sample_4.wav)</div>
+    <p>مدل جدید Tesla در تست‌های جاده‌ای روز 1403/11/09 توانست با یک بار شارژ باتری 82.5 کیلووات‌ساعتی، مسافت 615.8 کیلومتر را با میانگین سرعت 110.5 کیلومتر بر ساعت طی کند و مصرف انرژی را نسبت به محصولات Bosch و Siemens حدود 14.2 درصد کاهش دهد.</p>
+    <audio controls preload="metadata" src="demo/sample_4.wav"></audio>
+    <div><a href="demo/sample_4.wav" download>دانلود sample_4.wav</a></div>
+  </div>
+
+  <div class="card">
+    <div class="title">5. Mobile, Wireless &amp; Streaming (demo/sample_5.wav)</div>
+    <p>گوشی پرچم‌دار Samsung با نمایشگر OLED و تراشه Snapdragon در بنچمارک‌های تاریخ 2025/12/01 امتیاز 94.6 از 100 را کسب کرد و در آزمایش اتصال wireless و پخش زنده stream با کدک Opus روی پلتفرم YouTube تنها 1.35 درصد افت بسته‌های شبکه داشت.</p>
+    <audio controls preload="metadata" src="demo/sample_5.wav"></audio>
+    <div><a href="demo/sample_5.wav" download>دانلود sample_5.wav</a></div>
+  </div>
+</body>
+</html>
