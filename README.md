@@ -12,11 +12,12 @@ A modular, offline Persian Text-to-Speech (TTS) workspace written in Rust. It pr
 │   ├── persian_normalizer/    # Zero-dependency Persian/mixed text normalizer (.rlib, .a, .so)
 │   ├── tokenizer/             # General SentencePiece BPE tokenizer: encode(), count(), split_sentences() (.rlib, .a, .so)
 │   └── speak/                 # Standalone CLI binary statically linking normalizer, tokenizer, and ptts_ffi
+├── demo/                      # Pre-generated mixed-text WAV demo samples (sample_1.wav .. sample_5.wav)
 ├── include/
 │   ├── persian_normalizer.h   # C/C++/FFI header for libpersian_normalizer
 │   └── tokenizer.h            # C/C++/FFI header for libtokenizer
 ├── dict/                      # Pronunciation dictionaries (cmudict.txt, latin_dict.txt)
-├── demo/                      # Pre-generated mixed-text WAV demo recordings
+├── index.html                 # GitHub Pages interactive audio demo player
 └── xn-ptts/                   # Git submodule (gradium-ai/xn-ptts)
 ```
 
@@ -127,21 +128,23 @@ SPEAK_TIMING=output.json PTTS_VOICE=voice1 PTTS_TEMPERATURE=0.3 PTTS_SEED=42 \
 
 ## Demo & Mixed-Text Samples
 
+> **Interactive Browser Player:** Listen to all samples with their full text on [GitHub Pages](https://gyroing.github.io/persian-tts-bridge/).
+
 Pre-generated sample recordings (24 kHz, 16-bit signed LE mono PCM converted to WAV) are stored under `demo/`:
 
-1. **AI & Hardware (`demo/sample_1.wav`)**
+1. **AI & Hardware (`demo/sample_1.wav`)** — [Play on GitHub Pages](https://gyroing.github.io/persian-tts-bridge/#sample-1)
    > در تاریخ 1404/08/25، شرکت NVIDIA از پردازنده گرافیکی جدید خود با 24.5 گیگابایت حافظه VRAM و معماری Blackwell رونمایی کرد که اجرای مدل‌های LLM در قالب GGUF را با latency زیر 18.4 میلی‌ثانیه و performance بسیار بالا روی سرورهای AWS و Azure ممکن می‌سازد.
 
-2. **Finance, Markets & Decimals (`demo/sample_2.wav`)**
+2. **Finance, Markets & Decimals (`demo/sample_2.wav`)** — [Play on GitHub Pages](https://gyroing.github.io/persian-tts-bridge/#sample-2)
    > طبق گزارش quarterly منتشرشده در 2026/03/15، ارزش سهام Apple و Microsoft به ترتیب 3.75 و 4.2 درصد رشد داشت و سرمایه‌گذاری مشترک OpenAI و Anthropic روی زیرساخت‌های cloud و دیتاسنترهای مجهز به پردازنده‌های AMD به 12.8 میلیارد دلار رسید.
 
-3. **Software & TTS Pipeline (`demo/sample_3.wav`)**
+3. **Software & TTS Pipeline (`demo/sample_3.wav`)** — [Play on GitHub Pages](https://gyroing.github.io/persian-tts-bridge/#sample-3)
    > نسخه 2.4.1 کتابخانه persian-tts-bridge که با زبان Rust و Cargo نوشته شده، در تاریخ ۱۴۰۵/۰۲/۱۰ روی GitHub و HuggingFace منتشر شد و می‌تواند متن‌های فارسی و انگلیسی را با نرخ نمونه‌برداری 24000 هرتز و دقت 99.6 درصد به صورت real-time و آفلاین پردازش کند.
 
-4. **EVs, Energy & Units (`demo/sample_4.wav`)**
+4. **EVs, Energy & Units (`demo/sample_4.wav`)** — [Play on GitHub Pages](https://gyroing.github.io/persian-tts-bridge/#sample-4)
    > مدل جدید Tesla در تست‌های جاده‌ای روز 1403/11/09 توانست با یک بار شارژ باتری 82.5 کیلووات‌ساعتی، مسافت 615.8 کیلومتر را با میانگین سرعت 110.5 کیلومتر بر ساعت طی کند و مصرف انرژی را نسبت به محصولات Bosch و Siemens حدود 14.2 درصد کاهش دهد.
 
-5. **Mobile, Wireless & Streaming (`demo/sample_5.wav`)**
+5. **Mobile, Wireless & Streaming (`demo/sample_5.wav`)** — [Play on GitHub Pages](https://gyroing.github.io/persian-tts-bridge/#sample-5)
    > گوشی پرچم‌دار Samsung با نمایشگر OLED و تراشه Snapdragon در بنچمارک‌های تاریخ 2025/12/01 امتیاز 94.6 از 100 را کسب کرد و در آزمایش اتصال wireless و پخش زنده stream با کدک Opus روی پلتفرم YouTube تنها 1.35 درصد افت بسته‌های شبکه داشت.
 
 ### Live Playback Example
